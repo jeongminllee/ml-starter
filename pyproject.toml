@@ -21,3 +21,21 @@ dev = [
     "ruff>=0.14.3",
     "wandb>=0.22.3",
 ]
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+# Lint 규칙: 기본(E,F) + 유용한 몇 가지(UP: 최신문법, B: bugbear, I: import정리)
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]  # 길이 제한은 black에게 맡김
+
+[tool.ruff.format]
+quote-style = "double"   # 따옴표 스타일 통일(선호에 맞춰 조정 가능)
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
