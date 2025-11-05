@@ -1,0 +1,27 @@
+{
+  "os": "macOS-15.7.1-x86_64-i386-64bit",
+  "python": "CPython 3.12.12",
+  "startedAt": "2025-11-05T07:49:09.804043Z",
+  "program": "/Users/ijeongmin/Desktop/projects/hello-langgraph/main.py",
+  "codePath": "main.py",
+  "codePathLocal": "main.py",
+  "git": {
+    "commit": "5dbe5bb6b0529a0868a92c43df33f06904e311e5"
+  },
+  "email": "erad3254@gmail.com",
+  "root": "/Users/ijeongmin/Desktop/projects/hello-langgraph",
+  "host": "ijeongmin-ui-MacBook-Pro.local",
+  "executable": "/Users/ijeongmin/Desktop/projects/hello-langgraph/.venv/bin/python3",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "disk": {
+    "/": {
+      "total": "499963174912",
+      "used": "198977269760"
+    }
+  },
+  "memory": {
+    "total": "17179869184"
+  },
+  "writerId": "tm5dj857fsi4bmbtniwe5l5z8k9yc0b7"
+}

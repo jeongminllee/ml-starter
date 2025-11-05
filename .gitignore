@@ -8,3 +8,13 @@ wheels/
 
 # Virtual environments
 .venv
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+.env.*
+.wandb/
+.mlflow/
+.data/
+outputs/

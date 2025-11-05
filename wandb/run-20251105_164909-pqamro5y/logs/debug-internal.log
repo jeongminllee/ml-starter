@@ -1,0 +1,13 @@
+{"time":"2025-11-05T16:49:10.737905+09:00","level":"INFO","msg":"stream: starting","core version":"0.22.3"}
+{"time":"2025-11-05T16:49:10.751073+09:00","level":"ERROR","msg":"monitor: failed to initialize GPU resource: monitor: could not start GPU binary: fork/exec /Users/ijeongmin/Desktop/projects/hello-langgraph/.venv/lib/python3.12/site-packages/wandb/bin/gpu_stats: bad CPU type in executable"}
+{"time":"2025-11-05T16:49:10.953174+09:00","level":"INFO","msg":"stream: created new stream","id":"pqamro5y"}
+{"time":"2025-11-05T16:49:10.953282+09:00","level":"INFO","msg":"handler: started","stream_id":"pqamro5y"}
+{"time":"2025-11-05T16:49:10.953747+09:00","level":"INFO","msg":"stream: started","id":"pqamro5y"}
+{"time":"2025-11-05T16:49:10.953745+09:00","level":"INFO","msg":"writer: started","stream_id":"pqamro5y"}
+{"time":"2025-11-05T16:49:10.953774+09:00","level":"INFO","msg":"sender: started","stream_id":"pqamro5y"}
+{"time":"2025-11-05T16:49:12.755114+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-11-05T16:49:13.179859+09:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-11-05T16:49:13.185363+09:00","level":"INFO","msg":"stream: closing","id":"pqamro5y"}
+{"time":"2025-11-05T16:49:13.185402+09:00","level":"INFO","msg":"handler: closed","stream_id":"pqamro5y"}
+{"time":"2025-11-05T16:49:13.185618+09:00","level":"INFO","msg":"sender: closed","stream_id":"pqamro5y"}
+{"time":"2025-11-05T16:49:13.185642+09:00","level":"INFO","msg":"stream: closed","id":"pqamro5y"}
