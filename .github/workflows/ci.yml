@@ -1,0 +1,32 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  pull_request:
+  push:
+    branches: [ "main" ]
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  test :
+    runs-on : ubuntu-latest
+    steps :
+      - uses : actions/checkout@v4
+      - name : Install uv
+        uses : astral-sh/setup-uv@3
+        with :
+          version : "latest"
+      - name : Sync deps
+        run : uv sync
+      - name : Lint
+        run : uv run ruff
+      - name : Format check
+        run : uv run black --check .
+      - name : Pytest (WANDB offline)
+        env :
+          WANDB_MODE: offline
+        run : uv run pytest -q
