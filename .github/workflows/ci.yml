@@ -23,7 +23,7 @@ jobs:
       - name : Sync deps
         run : uv sync
       - name : Lint
-        run : uv run ruff
+        run : uv run ruff check .
       - name : Format check
         run : uv run black --check .
       - name : Pytest (WANDB offline)
