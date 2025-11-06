@@ -1,0 +1,13 @@
+{"time":"2025-11-06T22:06:54.201368+09:00","level":"INFO","msg":"stream: starting","core version":"0.22.3"}
+{"time":"2025-11-06T22:06:54.214984+09:00","level":"ERROR","msg":"monitor: failed to initialize GPU resource: monitor: could not start GPU binary: fork/exec /Users/ijeongmin/Desktop/projects/hello-langgraph/.venv/lib/python3.12/site-packages/wandb/bin/gpu_stats: bad CPU type in executable"}
+{"time":"2025-11-06T22:06:54.442997+09:00","level":"INFO","msg":"stream: created new stream","id":"k4cszm9f"}
+{"time":"2025-11-06T22:06:54.44309+09:00","level":"INFO","msg":"handler: started","stream_id":"k4cszm9f"}
+{"time":"2025-11-06T22:06:54.443497+09:00","level":"INFO","msg":"stream: started","id":"k4cszm9f"}
+{"time":"2025-11-06T22:06:54.44353+09:00","level":"INFO","msg":"writer: started","stream_id":"k4cszm9f"}
+{"time":"2025-11-06T22:06:54.443548+09:00","level":"INFO","msg":"sender: started","stream_id":"k4cszm9f"}
+{"time":"2025-11-06T22:06:56.913112+09:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-11-06T22:06:57.223968+09:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-11-06T22:06:57.237049+09:00","level":"INFO","msg":"stream: closing","id":"k4cszm9f"}
+{"time":"2025-11-06T22:06:57.237105+09:00","level":"INFO","msg":"handler: closed","stream_id":"k4cszm9f"}
+{"time":"2025-11-06T22:06:57.237451+09:00","level":"INFO","msg":"sender: closed","stream_id":"k4cszm9f"}
+{"time":"2025-11-06T22:06:57.237506+09:00","level":"INFO","msg":"stream: closed","id":"k4cszm9f"}

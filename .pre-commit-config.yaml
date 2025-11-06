@@ -28,9 +28,9 @@ repos:
       - id: detect-private-key
 
 # 선택: 대형/빈번 변경 파일 제외(필요시)
-# exclude: |
-#   (?x)^(
-#     .*/?data/|
-#     .*/?outputs/|
-#     .*\.ipynb
-#   )$
+exclude: |
+  (?x)^(
+    .*/?data/|
+    .*/?outputs/|
+    .*\.ipynb
+  )$

@@ -1,0 +1,14 @@
+{"time":"2025-11-06T18:32:25.355786+09:00","level":"INFO","msg":"stream: starting","core version":"0.22.3"}
+{"time":"2025-11-06T18:32:25.371671+09:00","level":"ERROR","msg":"monitor: failed to initialize GPU resource: monitor: could not start GPU binary: fork/exec /Users/ijeongmin/Desktop/projects/hello-langgraph/.venv/lib/python3.12/site-packages/wandb/bin/gpu_stats: bad CPU type in executable"}
+{"time":"2025-11-06T18:32:25.373651+09:00","level":"WARN","msg":"featurechecker: GraphQL client is nil, skipping feature loading"}
+{"time":"2025-11-06T18:32:25.373747+09:00","level":"INFO","msg":"stream: created new stream","id":"jx4q2oh5"}
+{"time":"2025-11-06T18:32:25.373834+09:00","level":"INFO","msg":"handler: started","stream_id":"jx4q2oh5"}
+{"time":"2025-11-06T18:32:25.374203+09:00","level":"INFO","msg":"stream: started","id":"jx4q2oh5"}
+{"time":"2025-11-06T18:32:25.374542+09:00","level":"INFO","msg":"writer: started","stream_id":"jx4q2oh5"}
+{"time":"2025-11-06T18:32:25.374763+09:00","level":"INFO","msg":"sender: started","stream_id":"jx4q2oh5"}
+{"time":"2025-11-06T18:32:25.375593+09:00","level":"WARN","msg":"runupserter: server does not expand metric globs but the x_server_side_expand_glob_metrics setting is set; ignoring"}
+{"time":"2025-11-06T18:32:27.37278+09:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-11-06T18:32:27.377453+09:00","level":"INFO","msg":"stream: closing","id":"jx4q2oh5"}
+{"time":"2025-11-06T18:32:27.377496+09:00","level":"INFO","msg":"handler: closed","stream_id":"jx4q2oh5"}
+{"time":"2025-11-06T18:32:27.377732+09:00","level":"INFO","msg":"sender: closed","stream_id":"jx4q2oh5"}
+{"time":"2025-11-06T18:32:27.377762+09:00","level":"INFO","msg":"stream: closed","id":"jx4q2oh5"}
