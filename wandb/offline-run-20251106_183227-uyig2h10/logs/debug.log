@@ -1,0 +1,20 @@
+2025-11-06 18:32:27,404 INFO    MainThread:67421 [wandb_init.py:setup_run_log_directory():706] Logging user logs to /Users/ijeongmin/Desktop/projects/hello-langgraph/wandb/offline-run-20251106_183227-uyig2h10/logs/debug.log
+2025-11-06 18:32:27,404 INFO    MainThread:67421 [wandb_init.py:setup_run_log_directory():707] Logging internal logs to /Users/ijeongmin/Desktop/projects/hello-langgraph/wandb/offline-run-20251106_183227-uyig2h10/logs/debug-internal.log
+2025-11-06 18:32:27,404 INFO    MainThread:67421 [wandb_init.py:init():833] calling init triggers
+2025-11-06 18:32:27,404 INFO    MainThread:67421 [wandb_init.py:init():838] wandb.init called with sweep_config: {}
+config: {'model': 'rf', '_wandb': {}}
+2025-11-06 18:32:27,405 INFO    MainThread:67421 [wandb_init.py:init():881] starting backend
+2025-11-06 18:32:27,405 INFO    MainThread:67421 [wandb_init.py:init():884] sending inform_init request
+2025-11-06 18:32:27,406 INFO    MainThread:67421 [wandb_init.py:init():892] backend started and connected
+2025-11-06 18:32:27,408 INFO    MainThread:67421 [wandb_init.py:init():962] updated telemetry
+2025-11-06 18:32:27,455 INFO    MainThread:67421 [wandb_init.py:init():986] communicating run to backend with 90.0 second timeout
+2025-11-06 18:32:27,459 INFO    MainThread:67421 [wandb_init.py:init():1033] starting run threads in backend
+2025-11-06 18:32:27,656 INFO    MainThread:67421 [wandb_run.py:_console_start():2506] atexit reg
+2025-11-06 18:32:27,656 INFO    MainThread:67421 [wandb_run.py:_redirect():2354] redirect: wrap_raw
+2025-11-06 18:32:27,656 INFO    MainThread:67421 [wandb_run.py:_redirect():2423] Wrapping output streams.
+2025-11-06 18:32:27,656 INFO    MainThread:67421 [wandb_run.py:_redirect():2446] Redirects installed.
+2025-11-06 18:32:27,657 INFO    MainThread:67421 [wandb_init.py:init():1073] run started, returning control to user process
+2025-11-06 18:32:28,638 INFO    MainThread:67421 [wandb_run.py:_finish():2272] finishing run ml-starter/uyig2h10
+2025-11-06 18:32:28,639 INFO    MainThread:67421 [wandb_run.py:_atexit_cleanup():2471] got exitcode: 0
+2025-11-06 18:32:28,639 INFO    MainThread:67421 [wandb_run.py:_restore():2453] restore
+2025-11-06 18:32:28,639 INFO    MainThread:67421 [wandb_run.py:_restore():2459] restore done

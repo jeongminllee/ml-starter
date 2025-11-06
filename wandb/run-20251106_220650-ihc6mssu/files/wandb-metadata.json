@@ -1,0 +1,26 @@
+{
+  "os": "macOS-15.7.1-x86_64-i386-64bit",
+  "python": "CPython 3.12.12",
+  "startedAt": "2025-11-06T13:06:50.884199Z",
+  "program": "-m ml_starter.train",
+  "git": {
+    "remote": "https://github.com/jeongminllee/ml-starter.git",
+    "commit": "498eb38d9ea2f2c102e79024adb1d80c640e558f"
+  },
+  "email": "erad3254@gmail.com",
+  "root": "/Users/ijeongmin/Desktop/projects/hello-langgraph",
+  "host": "ijeongmin-ui-MacBook-Pro.local",
+  "executable": "/Users/ijeongmin/Desktop/projects/hello-langgraph/.venv/bin/python3",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "disk": {
+    "/": {
+      "total": "499963174912",
+      "used": "199271206912"
+    }
+  },
+  "memory": {
+    "total": "17179869184"
+  },
+  "writerId": "yg1dsuafuas8i2cytmn4kl43xq99ekzm"
+}

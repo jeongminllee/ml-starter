@@ -1,0 +1,46 @@
+_wandb:
+    value:
+        cli_version: 0.22.3
+        e:
+            14f73md8sxbsbjj4yp16rndb4wyh8vrz:
+                cpu_count: 6
+                cpu_count_logical: 12
+                disk:
+                    /:
+                        total: "499963174912"
+                        used: "199269543936"
+                email: erad3254@gmail.com
+                executable: /Users/ijeongmin/Desktop/projects/hello-langgraph/.venv/bin/python3
+                git:
+                    commit: 498eb38d9ea2f2c102e79024adb1d80c640e558f
+                    remote: https://github.com/jeongminllee/ml-starter.git
+                host: ijeongmin-ui-MacBook-Pro.local
+                memory:
+                    total: "17179869184"
+                os: macOS-15.7.1-x86_64-i386-64bit
+                program: -m ml_starter.train
+                python: CPython 3.12.12
+                root: /Users/ijeongmin/Desktop/projects/hello-langgraph
+                startedAt: "2025-11-06T13:06:54.172630Z"
+                writerId: 14f73md8sxbsbjj4yp16rndb4wyh8vrz
+        m: []
+        python_version: 3.12.12
+        t:
+            "1":
+                - 5
+                - 53
+            "2":
+                - 5
+                - 53
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.12.12
+            "5": 0.22.3
+            "10":
+                - 20
+            "12": 0.22.3
+            "13": darwin-x86_64
+model:
+    value: rf
