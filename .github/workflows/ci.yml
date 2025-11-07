@@ -26,9 +26,9 @@ jobs:
         run : uv run ruff check .
       - name : Format check
         run : uv run black --check .
+      - name : Install project (editable)
+        run : uv pip install -e .
       - name : Pytest (WANDB)
         env :
           WANDB_MODE: online
         run : uv run pytest -q
-      - name : Install project (editable)
-        run : uv pip install -e .
