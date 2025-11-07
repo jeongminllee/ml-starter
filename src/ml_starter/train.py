@@ -44,8 +44,7 @@ def main():
             project="ml-starter",
             name=f"phase1-{name}",
             config={"model": name},
-            return_previous=False,
-            finish_previous=True,
+            reinit="finish_previous",
         )
 
         pipe.fit(X_train, y_train)
