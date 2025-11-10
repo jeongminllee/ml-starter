@@ -70,12 +70,28 @@ def build_preprocessor(X: pd.DataFrame) -> ColumnTransformer:
     num_pipe = Pipeline(
         [("imputer", SimpleImputer(strategy="median")), ("scaler", StandardScaler())]
     )
-    cat_pipe = Pipeline(
-        [
-            ("imputer", SimpleImputer(strategy="most_frequent")),
-            ("ohe", OneHotEncoder(handle_unknown="ignore")),
-        ]
-    )
+    # cat_pipe = Pipeline(
+    #     [
+    #         ("imputer", SimpleImputer(strategy="most_frequent")),
+    #         ("ohe", OneHotEncoder(handle_unknown="ignore")),
+    #     ]
+    # )
+    try:
+        # scikit-learn >= 1.2
+        cat_pipe = Pipeline(
+            [
+                ("imputer", SimpleImputer(strategy="most_frequent")),
+                ("ohe", OneHotEncoder(handle_unknown="ignore", sparse_output=False)),
+            ]
+        )
+    except TypeError:
+        # scikit-learn < 1.2
+        cat_pipe = Pipeline(
+            [
+                ("imputer", SimpleImputer(strategy="most_frequent")),
+                ("ohe", OneHotEncoder(handle_unknown="ignore", sparse=False)),
+            ]
+        )
 
     pre = ColumnTransformer(transformers=[("num", num_pipe, num_cols), ("cat", cat_pipe, cat_cols)])
 
@@ -188,6 +204,78 @@ def run_tuning(X_train, X_test, y_train, y_test, pre):
     print({"acc": acc, "f1": f1, "best_params": grid.best_params_})
 
 
+def run_rf_tuning(X_train, X_test, y_train, y_test, pre):
+    """Day2: RandomForest 소규모 그리드 서치 + W&B 로깅"""
+    rf_pipe = Pipeline(
+        [
+            ("pre", pre),
+            ("clf", RandomForestClassifier(random_state=42)),
+        ]
+    )
+
+    param_grid = {
+        "clf__n_estimators": [200, 400],
+        "clf__max_depth": [None, 6, 12],
+        "clf__min_samples_leaf": [1, 2, 4],
+        "clf__criterion": ["gini", "entropy"],
+        # "clf__class_weight" : [None, "balanced"],
+    }
+
+    grid = GridSearchCV(
+        estimator=rf_pipe,
+        param_grid=param_grid,
+        cv=5,
+        scoring="f1",
+        n_jobs=-1,
+        refit=True,
+        verbose=0,
+    )
+
+    _ = wandb.init(
+        project=PROJECT,
+        name="p1-tuned-rf",
+        config={
+            "model": "rf",
+            "search": "grid",
+        },
+        settings=wandb.Settings(save_code=False, code_dir="."),
+        reinit="finish_previous",
+    )
+
+    grid.fit(X_train, y_train)
+    best = grid.best_estimator_
+
+    pred = best.predict(X_test)
+    acc, f1 = accuracy_score(y_test, pred), f1_score(y_test, pred)
+    wandb.log(
+        {
+            "tuned/rf/accuracy": acc,
+            "tuned/rf/f1": f1,
+            "tuned/rf/best_params": grid.best_params_,
+        }
+    )
+
+    # Permutation importance (원본 피처 기준: 길이 불일치 방지)
+    r = permutation_importance(best, X_test, y_test, scoring="f1", n_repeats=8, random_state=42)
+    feat = X_test.columns.to_numpy()
+    imp = (
+        pd.DataFrame({"feature": feat, "importance": r.importances_mean})
+        .sort_values("importance", ascending=False)
+        .head(10)
+    )
+    wandb.log({"tuned/rf/top10_importance": wandb.Table(dataframe=imp)})
+
+    # 혼동행렬 저장/로그
+    png = OUT_DIR / "rf_tuned_cm.png"
+    plot_and_save_cm(y_test, pred, png, "Confusion Matrix - RF (tuned)")
+    wandb.save(str(png))
+    wandb.finish()
+
+    print("=== Summary (tuned RF) ===")
+    print({"acc": acc, "f1": f1, "best_params": grid.best_params_})
+
+
 if __name__ == "__main__":
     X_train, X_test, y_train, y_test, pre, _ = run_baseline()
     run_tuning(X_train, X_test, y_train, y_test, pre)
+    run_rf_tuning(X_train, X_test, y_train, y_test, pre)
