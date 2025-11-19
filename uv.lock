@@ -583,47 +583,6 @@ wheels = [
 ]
 
 [[package]]
-name = "hello-langgraph"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "jupyter" },
-    { name = "matplotlib" },
-    { name = "numpy" },
-    { name = "pandas" },
-    { name = "scikit-learn" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "black" },
-    { name = "ipykernel" },
-    { name = "pre-commit" },
-    { name = "pytest" },
-    { name = "ruff" },
-    { name = "wandb" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "jupyter", specifier = ">=1.1.1" },
-    { name = "matplotlib", specifier = ">=3.10.7" },
-    { name = "numpy", specifier = ">=2.3.4" },
-    { name = "pandas", specifier = ">=2.3.3" },
-    { name = "scikit-learn", specifier = ">=1.7.2" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "black", specifier = ">=25.9.0" },
-    { name = "ipykernel", specifier = ">=7.1.0" },
-    { name = "pre-commit", specifier = ">=4.3.0" },
-    { name = "pytest", specifier = ">=8.4.2" },
-    { name = "ruff", specifier = ">=0.14.3" },
-    { name = "wandb", specifier = ">=0.22.3" },
-]
-
-[[package]]
 name = "httpcore"
 version = "1.0.9"
 source = { registry = "https://pypi.org/simple" }
@@ -1269,6 +1228,47 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/d7/02/a7fb8b21d4d55ac93cdcde9d3638da5dd0ebdd3a4fed76c7725e10b81cbe/mistune-3.1.4.tar.gz", hash = "sha256:b5a7f801d389f724ec702840c11d8fc48f2b33519102fc7ee739e8177b672164", size = 94588, upload-time = "2025-08-29T07:20:43.594Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/7a/f0/8282d9641415e9e33df173516226b404d367a0fc55e1a60424a152913abc/mistune-3.1.4-py3-none-any.whl", hash = "sha256:93691da911e5d9d2e23bc54472892aff676df27a75274962ff9edc210364266d", size = 53481, upload-time = "2025-08-29T07:20:42.218Z" },
+]
+
+[[package]]
+name = "ml-starter"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "jupyter" },
+    { name = "matplotlib" },
+    { name = "numpy" },
+    { name = "pandas" },
+    { name = "scikit-learn" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "black" },
+    { name = "ipykernel" },
+    { name = "pre-commit" },
+    { name = "pytest" },
+    { name = "ruff" },
+    { name = "wandb" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "jupyter", specifier = ">=1.1.1" },
+    { name = "matplotlib", specifier = ">=3.10.7" },
+    { name = "numpy", specifier = ">=2.3.4" },
+    { name = "pandas", specifier = ">=2.3.3" },
+    { name = "scikit-learn", specifier = ">=1.7.2" },
+]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "black", specifier = ">=25.9.0" },
+    { name = "ipykernel", specifier = ">=7.1.0" },
+    { name = "pre-commit", specifier = ">=4.3.0" },
+    { name = "pytest", specifier = ">=8.4.2" },
+    { name = "ruff", specifier = ">=0.14.3" },
+    { name = "wandb", specifier = ">=0.22.3" },
 ]
 
 [[package]]
